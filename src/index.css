@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.links {
+  @apply w-full;
+  background-color: rgba(57, 205, 204, 0.09);
+  border-left: 6px solid #39cdcc;
+}
+
+.pagContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.paginationContainer {
+  width: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+}
+
+.paginationActive {
+  color: #213f7d;
+}
+
+.eachElem {
+  padding: 0 10px;
+  color: #545f7d;
+  cursor: pointer;
+}
+
+.prevBtnClass {
+  background: #213f7d1a;
+  border-radius: 5px;
+  padding: 4px 6px;
+  display: flex;
+  align-items: center;
+}
+
+.nexBtnClass {
+  background: #213f7d1a;
+  border-radius: 5px;
+  padding: 4px 6px;
+  display: flex;
+  align-items: center;
+}

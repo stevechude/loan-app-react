@@ -1,0 +1,317 @@
+[
+  {
+    "index": 1,
+    "_id": "6779a6e77017302bea8296c6",
+    "createdAt": "2021-11-30T06:36:34 -01:00",
+    "purpose": "mortgage",
+    "amount": 289333,
+    "tenure": "9 months",
+    "status": "active"
+  },
+  {
+    "index": 2,
+    "_id": "6779a6e7a26bc41ff8ebace9",
+    "createdAt": "2024-12-30T01:07:05 -01:00",
+    "purpose": "mortgage",
+    "amount": 346327,
+    "tenure": "3 months",
+    "status": "inactive"
+  },
+  {
+    "index": 3,
+    "_id": "6779a6e76689f9c1ae110412",
+    "createdAt": "2024-03-09T11:38:31 -01:00",
+    "purpose": "investment",
+    "amount": 456683,
+    "tenure": "9 months",
+    "status": "inactive"
+  },
+  {
+    "index": 4,
+    "_id": "6779a6e77a0f8396b857b8ed",
+    "createdAt": "2020-01-19T12:22:29 -01:00",
+    "purpose": "mortgage",
+    "amount": 271646,
+    "tenure": "9 months",
+    "status": "inactive"
+  },
+  {
+    "index": 5,
+    "_id": "6779a6e76895d745cca4fd29",
+    "createdAt": "2024-08-28T09:26:40 -01:00",
+    "purpose": "mortgage",
+    "amount": 309772,
+    "tenure": "12 months",
+    "status": "inactive"
+  },
+  {
+    "index": 6,
+    "_id": "6779a6e7cb0eb3282e3d7767",
+    "createdAt": "2024-04-27T06:27:03 -01:00",
+    "purpose": "investment",
+    "amount": 168799,
+    "tenure": "12 months",
+    "status": "inactive"
+  },
+  {
+    "index": 7,
+    "_id": "6779a6e7e8687234142cfc9f",
+    "createdAt": "2022-10-02T01:25:58 -01:00",
+    "purpose": "mortgage",
+    "amount": 149222,
+    "tenure": "12 months",
+    "status": "inactive"
+  },
+  {
+    "index": 8,
+    "_id": "6779a6e7d86549beded064ac",
+    "createdAt": "2023-06-08T10:45:27 -01:00",
+    "purpose": "mortgage",
+    "amount": 226717,
+    "tenure": "6 months",
+    "status": "inactive"
+  },
+  {
+    "index": 9,
+    "_id": "6779a6e72fe82a42e8b1e891",
+    "createdAt": "2024-09-30T02:30:13 -01:00",
+    "purpose": "mortgage",
+    "amount": 387291,
+    "tenure": "12 months",
+    "status": "inactive"
+  },
+  {
+    "index": 10,
+    "_id": "6779a6e7d2a42d8c3fa5cbfe",
+    "createdAt": "2020-04-21T01:28:42 -01:00",
+    "purpose": "investment",
+    "amount": 403958,
+    "tenure": "9 months",
+    "status": "inactive"
+  },
+  {
+    "index": 11,
+    "_id": "6779a6e754031e96a683b2b2",
+    "createdAt": "2022-09-04T07:49:45 -01:00",
+    "purpose": "school fees",
+    "amount": 310790,
+    "tenure": "6 months",
+    "status": "inactive"
+  },
+  {
+    "index": 12,
+    "_id": "6779a6e705f099148b88b8ee",
+    "createdAt": "2022-08-07T06:31:16 -01:00",
+    "purpose": "rent",
+    "amount": 204393,
+    "tenure": "6 months",
+    "status": "inactive"
+  },
+  {
+    "index": 13,
+    "_id": "6779a6e7d094076a043f86e7",
+    "createdAt": "2023-06-06T11:02:52 -01:00",
+    "purpose": "burial",
+    "amount": 364922,
+    "tenure": "9 months",
+    "status": "inactive"
+  },
+  {
+    "index": 14,
+    "_id": "6779a6e7145d302b18079090",
+    "createdAt": "2021-12-30T03:51:39 -01:00",
+    "purpose": "burial",
+    "amount": 239302,
+    "tenure": "6 months",
+    "status": "inactive"
+  },
+  {
+    "index": 15,
+    "_id": "6779a6e75d7298f288336e40",
+    "createdAt": "2023-03-01T03:46:40 -01:00",
+    "purpose": "mortgage",
+    "amount": 405504,
+    "tenure": "12 months",
+    "status": "inactive"
+  },
+  {
+    "index": 16,
+    "_id": "6779a6e70f874e97a283b7f9",
+    "createdAt": "2023-01-05T03:13:44 -01:00",
+    "purpose": "mortgage",
+    "amount": 469791,
+    "tenure": "12 months",
+    "status": "inactive"
+  },
+  {
+    "index": 17,
+    "_id": "6779a6e742b6c7fb7e8ab4b6",
+    "createdAt": "2021-02-14T05:50:48 -01:00",
+    "purpose": "school fees",
+    "amount": 494397,
+    "tenure": "6 months",
+    "status": "inactive"
+  },
+  {
+    "index": 18,
+    "_id": "6779a6e72a16d04041d7c67f",
+    "createdAt": "2020-08-08T02:45:06 -01:00",
+    "purpose": "rent",
+    "amount": 333232,
+    "tenure": "12 months",
+    "status": "inactive"
+  },
+  {
+    "index": 19,
+    "_id": "6779a6e7abe41a184091ca08",
+    "createdAt": "2022-05-21T03:59:26 -01:00",
+    "purpose": "burial",
+    "amount": 369141,
+    "tenure": "6 months",
+    "status": "inactive"
+  },
+  {
+    "index": 20,
+    "_id": "6779a6e79d022c186fe70167",
+    "createdAt": "2024-07-11T09:00:07 -01:00",
+    "purpose": "rent",
+    "amount": 136203,
+    "tenure": "3 months",
+    "status": "inactive"
+  },
+  {
+    "index": 21,
+    "_id": "6779a6e79a116fec9a7f1fe9",
+    "createdAt": "2021-04-14T08:16:30 -01:00",
+    "purpose": "rent",
+    "amount": 406008,
+    "tenure": "6 months",
+    "status": "inactive"
+  },
+  {
+    "index": 22,
+    "_id": "6779a6e7ca1dc18cd499aa88",
+    "createdAt": "2023-09-29T11:53:37 -01:00",
+    "purpose": "investment",
+    "amount": 168496,
+    "tenure": "3 months",
+    "status": "inactive"
+  },
+  {
+    "index": 23,
+    "_id": "6779a6e7b0135cfcbfcf1486",
+    "createdAt": "2022-04-05T04:51:14 -01:00",
+    "purpose": "school fees",
+    "amount": 486685,
+    "tenure": "12 months",
+    "status": "inactive"
+  },
+  {
+    "index": 24,
+    "_id": "6779a6e74853937030dc829a",
+    "createdAt": "2023-01-19T05:15:11 -01:00",
+    "purpose": "mortgage",
+    "amount": 112974,
+    "tenure": "9 months",
+    "status": "inactive"
+  },
+  {
+    "index": 25,
+    "_id": "6779a6e738ba282916c25179",
+    "createdAt": "2021-01-30T12:33:20 -01:00",
+    "purpose": "mortgage",
+    "amount": 145246,
+    "tenure": "9 months",
+    "status": "inactive"
+  },
+  {
+    "index": 26,
+    "_id": "6779a6e7fba9e6eadf1e2b88",
+    "createdAt": "2024-09-19T05:24:43 -01:00",
+    "purpose": "school fees",
+    "amount": 247023,
+    "tenure": "3 months",
+    "status": "inactive"
+  },
+  {
+    "index": 27,
+    "_id": "6779a6e7b2cf482b51557fb1",
+    "createdAt": "2023-07-20T08:05:10 -01:00",
+    "purpose": "rent",
+    "amount": 365922,
+    "tenure": "12 months",
+    "status": "inactive"
+  },
+  {
+    "index": 28,
+    "_id": "6779a6e7e840c12487866562",
+    "createdAt": "2022-09-14T05:04:37 -01:00",
+    "purpose": "rent",
+    "amount": 321655,
+    "tenure": "12 months",
+    "status": "inactive"
+  },
+  {
+    "index": 29,
+    "_id": "6779a6e7cba17d734e29ba5a",
+    "createdAt": "2020-12-05T03:38:41 -01:00",
+    "purpose": "mortgage",
+    "amount": 178146,
+    "tenure": "6 months",
+    "status": "inactive"
+  },
+  {
+    "index": 30,
+    "_id": "6779a6e76349d0b818dbd2ff",
+    "createdAt": "2024-01-12T06:52:04 -01:00",
+    "purpose": "rent",
+    "amount": 449875,
+    "tenure": "6 months",
+    "status": "inactive"
+  },
+  {
+    "index": 31,
+    "_id": "6779a6e7ff058b1c8a7ac48d",
+    "createdAt": "2020-09-12T02:31:30 -01:00",
+    "purpose": "burial",
+    "amount": 455751,
+    "tenure": "9 months",
+    "status": "inactive"
+  },
+  {
+    "index": 32,
+    "_id": "6779a6e78b83e5e948eb5751",
+    "createdAt": "2020-02-26T01:55:54 -01:00",
+    "purpose": "school fees",
+    "amount": 160977,
+    "tenure": "12 months",
+    "status": "inactive"
+  },
+  {
+    "index": 33,
+    "_id": "6779a6e7caaf39962c91bc95",
+    "createdAt": "2024-12-10T06:16:35 -01:00",
+    "purpose": "rent",
+    "amount": 337703,
+    "tenure": "6 months",
+    "status": "inactive"
+  },
+  {
+    "index": 34,
+    "_id": "6779a6e785f5053729df0d44",
+    "createdAt": "2020-12-04T04:00:59 -01:00",
+    "purpose": "investment",
+    "amount": 141237,
+    "tenure": "3 months",
+    "status": "inactive"
+  },
+  {
+    "index": 35,
+    "_id": "6779a6e7e8ecde24dc3cb02b",
+    "createdAt": "2023-05-14T08:47:23 -01:00",
+    "purpose": "investment",
+    "amount": 346635,
+    "tenure": "3 months",
+    "status": "inactive"
+  }
+]
