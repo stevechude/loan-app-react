@@ -1,15 +1,19 @@
 import { useQuery } from "@tanstack/react-query";
 import ReactPaginate from "react-paginate";
-import { fetchTransactions } from "../services/requests";
+import {
+  fetchTransactions,
+  fetchTransactionsByParams,
+} from "../services/requests";
 import Loader from "../components/loader/Loader";
 import Table from "../components/tables/Table";
 import { useState } from "react";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
 const Transactions = () => {
+  const [trxType, setTrxType] = useState("");
   const { data: transacs = [], isFetching } = useQuery({
-    queryKey: ["fetchingTransactions"],
-    queryFn: () => fetchTransactions(),
+    queryKey: ["fetchingTransactions", trxType],
+    queryFn: () => fetchTransactionsByParams({ type: trxType }),
     staleTime: 1000 * 60 * 5, // 5 minutes
     refetchOnWindowFocus: false,
   });
@@ -36,7 +40,23 @@ const Transactions = () => {
       </h1>
       {/* table */}
       <div className="flex flex-col gap-6">
-        <div className="w-full overflow-x-auto flex flex-col rounded-md shadow bg-white">
+        <div className="w-full overflow-x-auto flex flex-col gap-2 rounded-md shadow bg-white">
+          <div className="flex items-center gap-3 lg:gap-6 px-2 pt-2 md:px-3 lg:px-4 lg:pt-4">
+            <p className="text-[#213F7D]">Filter</p>
+            <div className="flex items-center gap-4">
+              <select
+                name="type"
+                id="type"
+                onChange={(e) => setTrxType(e.target.value)}
+                className="flex items-center gap-2 rounded-lg cursor-pointer text-white bg-[#39cdcc] py-1 px-2 outline-none"
+              >
+                <option hidden>Type</option>
+                <option value="">All</option>
+                <option value="credit">Credit</option>
+                <option value="debit">Debit</option>
+              </select>
+            </div>
+          </div>
           {isFetching ? (
             <Loader />
           ) : transacs.length > 0 ? (

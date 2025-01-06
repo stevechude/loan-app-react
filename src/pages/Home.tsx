@@ -1,19 +1,26 @@
 import { useQuery } from "@tanstack/react-query";
 import Placehold from "../assets/Placehold";
 import { FaRegStar, FaStar } from "react-icons/fa";
-import { fetchTransactions } from "../services/requests";
+import { fetchTransactions, fetchUser } from "../services/requests";
 import { useMemo } from "react";
 import Loader from "../components/loader/Loader";
 import Table from "../components/tables/Table";
 import { Trx } from "../lib/types";
 
 export default function Home() {
-  const { data, isFetching, error } = useQuery({
+  const { data, isFetching } = useQuery({
     queryKey: ["getTransactions"],
     queryFn: () => fetchTransactions(),
     staleTime: 1000 * 60 * 5, // 5 minutes
     refetchOnWindowFocus: false,
   });
+  const { data: userDetails, isLoading } = useQuery({
+    queryKey: ["user"],
+    queryFn: () => fetchUser(),
+    staleTime: 1000 * 60 * 5, // 5 minutes
+    refetchOnWindowFocus: false,
+  });
+  console.log("deets==", userDetails);
 
   const recentTransactions: Trx[] = useMemo(() => {
     return (data || []).slice(0, 8);
@@ -26,39 +33,47 @@ export default function Home() {
         style={{ boxShadow: "0px 0px 4px -2px gray" }}
         className="rounded-lg h-56 w-full bg-white flex items-center"
       >
-        <div className="w-full flex flex-wrap gap-2.5 lg:flex-nowrap justify-between px-2 md:px-5 lg:px-8">
-          <div className="flex items-center gap-4">
-            <div className="rounded-full border p-3 md:p-4 lg:p-6 bg-[#213F7D] bg-opacity-15">
-              <Placehold />
+        {isLoading ? (
+          <Loader />
+        ) : (
+          <div className="w-full flex flex-wrap gap-2.5 lg:flex-nowrap justify-between px-2 md:px-5 lg:px-8">
+            <div className="flex items-center gap-4">
+              <div className="rounded-full border p-3 md:p-4 lg:p-6 bg-[#213F7D] bg-opacity-15">
+                <Placehold />
+              </div>
+              <div className="flex flex-col gap-2 text-[#213F7D]">
+                <p className="text-lg md:text-xl lg:text-2xl">
+                  {userDetails?.name}
+                </p>
+                <p className="text-xs lg:text-sm">{userDetails?.userId}</p>
+              </div>
             </div>
-            <div className="flex flex-col gap-2 text-[#213F7D]">
-              <p className="text-lg md:text-xl lg:text-2xl">Grace Effiom</p>
-              <p className="text-xs lg:text-sm">LSQFf587g90</p>
-            </div>
-          </div>
 
-          {/* stars */}
-          <div className="flex items-center gap-3 border-s border-e px-4">
-            <div className="flex flex-col items-center gap-3">
-              <p className="text-[#213F7D] text-lg md:text-xl lg:text-2xl">
-                User’s Tier
-              </p>
-              <span className="flex items-center gap-2">
-                <FaStar color="#E9B200" />
-                <FaRegStar color="#E9B200" />
-                <FaRegStar color="#E9B200" />
-              </span>
+            {/* stars */}
+            <div className="flex items-center gap-3 border-s border-e px-4">
+              <div className="flex flex-col items-center gap-3">
+                <p className="text-[#213F7D] text-lg md:text-xl lg:text-2xl">
+                  User’s Tier
+                </p>
+                <span className="flex items-center gap-2">
+                  <FaStar color="#E9B200" />
+                  <FaRegStar color="#E9B200" />
+                  <FaRegStar color="#E9B200" />
+                </span>
+              </div>
             </div>
-          </div>
 
-          {/* amt */}
-          <div className="flex items-center text-[#213F7D]">
-            <div className="flex flex-col gap-2 lg:gap-3">
-              <p className="text-lg md:text-xl lg:text-2xl">₦200,000.00</p>
-              <p className="text-xs lg:text-sm">9912345678/Providus Bank</p>
+            {/* amt */}
+            <div className="flex items-center text-[#213F7D]">
+              <div className="flex flex-col gap-2 lg:gap-3">
+                <p className="text-lg md:text-xl lg:text-2xl">
+                  {userDetails?.balance}
+                </p>
+                <p className="text-xs lg:text-sm">{userDetails?.bank}</p>
+              </div>
             </div>
           </div>
-        </div>
+        )}
       </div>
 
       {/* table of recent trx */}

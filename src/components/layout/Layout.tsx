@@ -2,6 +2,7 @@ import React from "react";
 import SideBar from "./SideBar";
 import Header from "./Header";
 import QueryProvider from "../../provider/query-provider";
+import ReduxProvider from "../../provider/Reduxprovider";
 
 const Layout = ({
   children,
@@ -15,7 +16,9 @@ const Layout = ({
         <div className="h-screen flex bg-[#F5F5F5]">
           <SideBar />
           <div className="flex-grow p-2 md:p-4 lg:px-12 lg:py-8 overflow-y-auto">
-            <QueryProvider>{children}</QueryProvider>
+            <ReduxProvider>
+              <QueryProvider>{children}</QueryProvider>
+            </ReduxProvider>
           </div>
         </div>
       </div>
