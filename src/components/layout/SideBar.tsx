@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { linksMenu } from "../../lib/links";
 import DashIcon from "../../assets/DashIcon";
 
@@ -11,13 +11,13 @@ const SideBar = () => {
     >
       <div className="flex flex-col gap-4">
         <div className={`${location.pathname === "/" ? "links" : ""}`}>
-          <a
-            href={`/`}
+          <Link
+            to={`/`}
             className="flex items-center gap-2 text-sm lg:text-base py-2 px-6"
           >
             {<DashIcon />}
             <p className="text-[#545f7d]">Dashboard</p>
-          </a>
+          </Link>
         </div>
         {linksMenu?.map((link) => (
           <div
@@ -26,13 +26,13 @@ const SideBar = () => {
               location.pathname.includes(link.path) ? "links" : ""
             }`}
           >
-            <a
-              href={`/${link.path}`}
+            <Link
+              to={`/${link.path}`}
               className="flex items-center gap-2 text-sm lg:text-base py-2 px-6"
             >
               {<link.icon />}
               <p className="text-[#545f7d]">{link.name}</p>
-            </a>
+            </Link>
           </div>
         ))}
       </div>
