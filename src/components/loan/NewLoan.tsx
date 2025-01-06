@@ -1,5 +1,3 @@
-import React from "react";
-
 const NewLoan = () => {
   return (
     <div className="bg-white p-8 rounded-xl w-[80vw] md:w-[50vw] lg:w-[25rem]">

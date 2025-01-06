@@ -1,9 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import ReactPaginate from "react-paginate";
-import {
-  fetchTransactions,
-  fetchTransactionsByParams,
-} from "../services/requests";
+import { fetchTransactionsByParams } from "../services/requests";
 import Loader from "../components/loader/Loader";
 import Table from "../components/tables/Table";
 import { useState } from "react";
