@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { setLoanId, setOpenDetails } from "../../redux/features/loanSlice";
 import { useAppDispatch } from "../../redux/hooks";
 
@@ -15,6 +16,19 @@ type Props = {
 
 const Table = ({ headers, data, click }: Props) => {
   const dispatch = useAppDispatch();
+
+  function formatAmount(amount: number) {
+    // const numericAmount =
+    const amountString =
+      typeof amount === "string" ? amount : amount?.toString();
+
+    // Remove commas from the amount
+    const numericAmount = parseFloat(amountString?.replace(/,/g, ""));
+
+    return Number(numericAmount).toLocaleString(undefined, {
+      maximumFractionDigits: 2,
+    }); // Format the number with commas
+  }
 
   return (
     <div>
@@ -36,7 +50,7 @@ const Table = ({ headers, data, click }: Props) => {
           {data?.map((dt, idx) => (
             <tr
               key={dt?._id ? dt?._id : idx}
-              className={`text-tableTextColor border-t border-b text-xs md:text-sm lg:text-base ${
+              className={`text-[#4f4f4f] border-t border-b text-xs md:text-sm lg:text-base ${
                 click ? "hover:bg-slate-100" : ""
               }`}
             >
@@ -58,11 +72,14 @@ const Table = ({ headers, data, click }: Props) => {
                       : ""
                   } ${header.key === "desc" ? "truncate" : ""}`}
                 >
-                  <a href={""} className={`${click ? "cursor-text" : ""}`}>
+                  {header.key === "amount" ? "₦" : ""}
+                  <Link to={""} className={`${click ? "cursor-text" : ""}`}>
                     {header.key === "createdAt"
                       ? dt[header.key].slice(0, 10)
+                      : dt[header.key] && header.key === "amount"
+                      ? formatAmount(dt[header.key])
                       : dt[header.key]}
-                  </a>
+                  </Link>
                 </td>
               ))}
               {click && (

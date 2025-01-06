@@ -10,6 +10,19 @@ const SingleLoan = () => {
     queryFn: () => fetchLoanById(loanId),
   });
 
+  function formatAmount(amount: number) {
+    // const numericAmount =
+    const amountString =
+      typeof amount === "string" ? amount : amount?.toString();
+
+    // Remove commas from the amount
+    const numericAmount = parseFloat(amountString?.replace(/,/g, ""));
+
+    return Number(numericAmount).toLocaleString(undefined, {
+      maximumFractionDigits: 2,
+    }); // Format the number with commas
+  }
+
   return (
     <div className="bg-white p-8 rounded-xl w-[80vw] md:w-[50vw] lg:w-[25rem]">
       <div className="flex flex-col items-center gap-8">
@@ -30,7 +43,7 @@ const SingleLoan = () => {
             </div>
             <div className="flex items-center justify-between">
               <p className="text-[#213F7D]">Amount:</p>
-              <span>{loan?.amount}</span>
+              <span>₦{formatAmount(loan?.amount ?? 0)}</span>
             </div>
             <div className="flex items-center justify-between gap-4">
               <p className="text-[#213F7D]">Loan Id:</p>
