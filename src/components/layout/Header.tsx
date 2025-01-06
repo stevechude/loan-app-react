@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FaWindowClose } from "react-icons/fa";
 import { IoMenuSharp } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -44,27 +45,27 @@ const Header = () => {
             />
 
             <div className="flex flex-col gap-6 p-2 pb-10 font-semibold">
-              <a
-                href={"/"}
+              <Link
+                to={"/"}
                 onClick={() => setOpenMenu(false)}
                 className="border-b border-white"
               >
                 Dashboard
-              </a>
-              <a
-                href={"/loan-mgt"}
+              </Link>
+              <Link
+                to={"/loan-mgt"}
                 onClick={() => setOpenMenu(false)}
                 className="border-b border-white"
               >
                 Loan Management
-              </a>
-              <a
-                href={"/transactions"}
+              </Link>
+              <Link
+                to={"/transactions"}
                 onClick={() => setOpenMenu(false)}
                 className="border-b border-white"
               >
                 Transactions
-              </a>
+              </Link>
             </div>
           </div>
         )}
