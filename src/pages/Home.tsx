@@ -34,7 +34,9 @@ export default function Home() {
         className="rounded-lg h-56 w-full bg-white flex items-center"
       >
         {isLoading ? (
-          <Loader />
+          <div className="flex items-center justify-center m-auto">
+            <Loader />
+          </div>
         ) : (
           <div className="w-full flex flex-wrap gap-2.5 lg:flex-nowrap justify-between px-2 md:px-5 lg:px-8">
             <div className="flex items-center gap-4">
