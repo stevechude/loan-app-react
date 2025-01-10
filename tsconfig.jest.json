@@ -1,0 +1,7 @@
+{
+  "extends": "./tsconfig.app.json",
+  "compilerOptions": {
+    "jsx": "react-jsx" // Ensure this is explicitly included
+  },
+  "include": ["src", "setup-test.ts", "**/*.spec.tsx"]
+}
