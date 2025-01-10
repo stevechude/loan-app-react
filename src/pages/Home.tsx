@@ -20,7 +20,7 @@ export default function Home() {
     staleTime: 1000 * 60 * 5, // 5 minutes
     refetchOnWindowFocus: false,
   });
-  console.log("deets==", userDetails);
+  // console.log("deets==", userDetails);
 
   const recentTransactions: Trx[] = useMemo(() => {
     return (data || []).slice(0, 8);
